@@ -6,20 +6,19 @@ package Capa_Negocio;
 
 /**
  *
- * @author user
+ * @author dario
  */
-public class AsientoDTO {
+public class BoletoBO {
     private String idAsiento;
-    private String etiqueta;
     private String estado;
 
-    public AsientoDTO(String idAsiento, String etiqueta, String estado) {
+    public BoletoBO(String idAsiento, String estado) {
         this.idAsiento = idAsiento;
-        this.etiqueta = etiqueta;
         this.estado = estado;
     }
 
-    public String getIdAsiento() { return idAsiento; }
-    public String getEtiqueta() { return etiqueta; }
-    public String getEstado() { return estado; }
+    public boolean puedeGenerarseBoleto() {
+        return this.estado.equalsIgnoreCase("Bloqueado");
+    }
 }
+

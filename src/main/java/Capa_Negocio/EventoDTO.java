@@ -12,10 +12,8 @@ public class EventoDTO {
     private String idEvento;
     private String nombre;
     private String descripcion;
-    private String fechaHora; 
+    private String fechaHora;
     private String estado;
-
-    public EventoDTO() {}
 
     public EventoDTO(String idEvento, String nombre, String descripcion, String fechaHora, String estado) {
         this.idEvento = idEvento;
@@ -26,17 +24,8 @@ public class EventoDTO {
     }
 
     public String getIdEvento() { return idEvento; }
-    public void setIdEvento(String idEvento) { this.idEvento = idEvento; }
-
     public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
-
     public String getDescripcion() { return descripcion; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
-
     public String getFechaHora() { return fechaHora; }
-    public void setFechaHora(String fechaHora) { this.fechaHora = fechaHora; }
-
     public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
 }

@@ -16,9 +16,7 @@ public class ReservacionDTO {
     private String fechaHora;
     private double totalPagado;
     private String estatus;
-    private List<String> idsAsientos; 
-
-    public ReservacionDTO() {}
+    private List<String> idsAsientos;
 
     public ReservacionDTO(String idReserva, String idUsuario, String fechaHora, double totalPagado, String estatus, List<String> idsAsientos) {
         this.idReserva = idReserva;
@@ -30,20 +28,9 @@ public class ReservacionDTO {
     }
 
     public String getIdReserva() { return idReserva; }
-    public void setIdReserva(String idReserva) { this.idReserva = idReserva; }
-
     public String getIdUsuario() { return idUsuario; }
-    public void setIdUsuario(String idUsuario) { this.idUsuario = idUsuario; }
-
     public String getFechaHora() { return fechaHora; }
-    public void setFechaHora(String fechaHora) { this.fechaHora = fechaHora; }
-
     public double getTotalPagado() { return totalPagado; }
-    public void setTotalPagado(double totalPagado) { this.totalPagado = totalPagado; }
-
     public String getEstatus() { return estatus; }
-    public void setEstatus(String estatus) { this.estatus = estatus; }
-
     public List<String> getIdsAsientos() { return idsAsientos; }
-    public void setIdsAsientos(List<String> idsAsientos) { this.idsAsientos = idsAsientos; }
 }
