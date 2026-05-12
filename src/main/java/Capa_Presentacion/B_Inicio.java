@@ -44,7 +44,7 @@ public class B_Inicio extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         Btn_InicioSesion = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        L_Administrador = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -163,10 +163,10 @@ public class B_Inicio extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel10.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(15, 120, 209));
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/usuario.png"))); // NOI18N
-        jLabel10.setText("Administrador");
+        L_Administrador.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
+        L_Administrador.setForeground(new java.awt.Color(15, 120, 209));
+        L_Administrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/usuario.png"))); // NOI18N
+        L_Administrador.setText("Administrador");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -177,7 +177,7 @@ public class B_Inicio extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel10)
+                        .addComponent(L_Administrador)
                         .addGap(14, 14, 14))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -200,7 +200,7 @@ public class B_Inicio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                .addComponent(jLabel10)
+                .addComponent(L_Administrador)
                 .addContainerGap())
         );
 
@@ -260,8 +260,8 @@ public class B_Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_InicioSesion;
+    private javax.swing.JLabel L_Administrador;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
