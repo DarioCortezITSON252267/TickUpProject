@@ -22,7 +22,7 @@ public class C_ControlTransaccional {
 
     public void irAMapaZonas(JFrame pantallaBusqueda, String idEvento) {
         pantallaBusqueda.dispose();
-        //B_MapaZonas ventanaZonas = new B_MapaZonas(idEvento);
+        //sB_MapaZonas ventanaZonas = new B_MapaZonas(idEvento);
         // ventanaZonas.setVisible(true);
     }
 
