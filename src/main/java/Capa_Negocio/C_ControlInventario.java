@@ -34,6 +34,26 @@ public class C_ControlInventario {
         }
         return filtrados;
     }
+    
+    public List<EventoDTO> buscarEventosPorFiltro(String textoBusqueda) {
+        List<EventoDTO> todosLosEventos = obtenerEventos(); // Reutilizamos el que ya valida BOs
+        
+        if (textoBusqueda == null || textoBusqueda.trim().isEmpty()) {
+            return todosLosEventos;
+        }
+
+        List<EventoDTO> filtrados = new ArrayList<>();
+        String textoLower = textoBusqueda.toLowerCase();
+
+        for (EventoDTO dto : todosLosEventos) {
+            // Filtramos si el nombre o la descripción contienen el texto
+            if (dto.getNombre().toLowerCase().contains(textoLower) || 
+                dto.getDescripcion().toLowerCase().contains(textoLower)) {
+                filtrados.add(dto);
+            }
+        }
+        return filtrados;
+    }
 
     public List<ZonaDTO> obtenerZonas(String idEvento) {
         List<ZonaDTO> dtos = zonaDAO.consultarZonasPorEvento(idEvento);

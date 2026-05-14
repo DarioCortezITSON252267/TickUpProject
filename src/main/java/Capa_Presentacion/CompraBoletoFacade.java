@@ -25,6 +25,20 @@ public class CompraBoletoFacade {
         this.controlInventario = controlInventario;
         this.controlCompra = controlCompra;
     }
+    
+    public List<String[]> obtenerEventosFiltradosParaTarjetas(String textoBusqueda) {
+        List<EventoDTO> eventos = controlInventario.buscarEventosPorFiltro(textoBusqueda);
+        List<String[]> datosEventos = new ArrayList<>();    
+        for (EventoDTO e : eventos) {
+            datosEventos.add(new String[]{
+                e.getIdEvento(), 
+                e.getNombre(), 
+                e.getDescripcion(), 
+                e.getFechaHora()
+            });
+        }
+        return datosEventos;
+    }
 
     public List<String[]> obtenerEventosParaTarjetas() {
         List<EventoDTO> eventos = controlInventario.obtenerEventos();
@@ -45,15 +59,12 @@ public class CompraBoletoFacade {
     }
 
     public String[] confirmarCompra(String idUsuario, List<String[]> asientosSeleccionados, double precioZona) {
-        List<AsientoDTO> listaAsientos = new ArrayList<>();
-        
+        List<AsientoDTO> listaAsientos = new ArrayList<>(); 
         for (String[] as : asientosSeleccionados) {
             controlInventario.bloquearAsiento(as[0], as[2]);
             listaAsientos.add(new AsientoDTO(as[0], as[1], "Bloqueado"));
         }
-
-        ReservacionDTO reserva = controlCompra.procesarReserva(idUsuario, listaAsientos, precioZona);
-        
+        ReservacionDTO reserva = controlCompra.procesarReserva(idUsuario, listaAsientos, precioZona); 
         if (reserva != null) {
             return new String[]{reserva.getIdReserva(), String.valueOf(reserva.getTotalPagado()), reserva.getEstatus()};
         }

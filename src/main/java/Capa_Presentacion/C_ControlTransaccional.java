@@ -16,14 +16,27 @@ public class C_ControlTransaccional {
 
     public void iniciarSesionYVerEventos(JFrame pantallaLogin) {
         pantallaLogin.dispose();
-        B_BusquedaDeElementos ventanaBusqueda = new B_BusquedaDeElementos();
+        B_BusquedaDeEventos ventanaBusqueda = new B_BusquedaDeEventos();
         ventanaBusqueda.setVisible(true);
     }
 
-    public void irAMapaZonas(JFrame pantallaBusqueda, String idEvento) {
-        pantallaBusqueda.dispose();
-        //sB_MapaZonas ventanaZonas = new B_MapaZonas(idEvento);
-        // ventanaZonas.setVisible(true);
+        public void irAMapaZonas(JFrame pantallaActual, String idEventoSeleccionado) {
+            pantallaActual.dispose(); 
+
+            // Creamos la nueva ventana y le inyectamos el ID del evento que seleccionó el usuario
+            // Nota: B_MapaDeZonas deberá tener un constructor que reciba este String
+            B_MapaZonas ventanaZonas = new B_MapaZonas(idEventoSeleccionado);
+            ventanaZonas.setVisible(true);
+            ventanaZonas.setLocationRelativeTo(null);
+        }
+        
+        public void regresarABusquedaEventos(JFrame pantallaMapaZonas) {
+        pantallaMapaZonas.dispose();
+        
+        // Volvemos a instanciar la pantalla de búsqueda y la mostramos
+        // (Asegúrate de pasarle la fachada y a sí mismo)
+        // B_BusquedaDeEventos busqueda = new B_BusquedaDeEventos(tuInstanciaDeFachada, this);
+        //busqueda.setVisible(true);
     }
 
     public void irASeleccionAsientos(JFrame pantallaZonas, String idZona, double precioZona) {
